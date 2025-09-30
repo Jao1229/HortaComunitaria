@@ -5,3 +5,6 @@ insert into Usuario (nome, email, telefone, tipo)
 values ("João Pedro", "joao@gmail.com", "888888888", "visitante");
 
 select * from Usuario;
+
+insert into Voluntario (id_usuario, disponibilidade, tempo_colaboracao) 
+values (1, "Sábados pela manhã", 5);

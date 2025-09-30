@@ -21,5 +21,13 @@ select * from Coordenador;
 select * from Visitante;
 
 update Voluntario 
+
+update Parcela 
+set status = "ativa" 
+where id_parcela = 2;
+
+select * from Voluntario;
+select * from Parcela;
+
 set tempo_colaboracao = tempo_colaboracao + 10 
 where id_usuario = 1;

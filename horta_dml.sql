@@ -8,3 +8,6 @@ select * from Usuario;
 
 insert into Voluntario (id_usuario, disponibilidade, tempo_colaboracao) 
 values (1, "Sábados pela manhã", 5);
+
+insert into Coordenador (id_usuario, funcao, area_responsavel) 
+values (2, "Gestão", "Área Norte");

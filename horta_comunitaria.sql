@@ -12,6 +12,14 @@ create table Usuario (
     
 );
 
+insert into Usuario (nome, email, telefone, tipo) 
+values ("Maria Silva", "maria@gmail.com", "999999999", "coordenador");
+
+insert into Usuario (nome, email, telefone, tipo) 
+values ("João Pedro", "joao@gmail.com", "888888888", "visitante");
+
+select * from Usuario;
+
 -- Tabelas Especializadas
 create table Voluntario (
     id_usuario int primary key,
@@ -22,6 +30,8 @@ create table Voluntario (
     on update cascade
 );
 
+insert into Voluntario (id_usuario, disponibilidade, tempo_colaboracao) 
+values (1, "Sábados pela manhã", 5);
 
 create table Coordenador (
     id_usuario int primary key,
@@ -32,6 +42,9 @@ create table Coordenador (
     on update cascade
 );
 
+insert into Coordenador (id_usuario, funcao, area_responsavel) 
+values (2, "Gestão", "Área Norte");
+
 create table Visitante (
     id_usuario int primary key,
     data_visita date not null,
@@ -39,6 +52,17 @@ create table Visitante (
     on delete cascade
     on update cascade 
 );
+
+insert into Visitante (id_usuario, data_visita) 
+values (3, "2025-09-28");
+
+select * from Voluntario; 
+select * from Coordenador; 
+select * from Visitante;
+
+update Voluntario 
+set tempo_colaboracao = tempo_colaboracao + 10 
+where id_usuario = 1;
 
 -- Produto/Plantas
 create table Produto (
@@ -64,6 +88,12 @@ create table Parcela (
     localizacao varchar(100) not null,
     status enum('ativa', 'em manutenção') not null
 );
+update Parcela 
+set status = "ativa" 
+where id_parcela = 2;
+
+select * from Voluntario;
+select * from Parcela;
 
 -- ParticipacaoEvento (Tabela de Relacionamento)
 create table Participacao_Evento (

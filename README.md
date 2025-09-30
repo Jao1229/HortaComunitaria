@@ -11,4 +11,19 @@
 - Banco de Dados MySql
 - Utilizar ferramentas como MySql Workbench
 
-### Como executar:
+### Como executar para testes:
+- create table Usuario (
+    id_usuario int auto_increment primary key,
+    nome varchar(100) not null,
+    email varchar(100) not null unique,
+    telefone varchar(20) not null,
+    tipo enum('voluntario', 'coordenador', 'visitante') not null
+    
+);
+- insert into Usuario (nome, email, telefone, tipo) 
+values ("Maria Silva", "maria@gmail.com", "999999999", "voluntario");
+
+- select * from Usuario; 
+- update Voluntario 
+set tempo_colaboracao = tempo_colaboracao + 10 
+where id_usuario = 1;

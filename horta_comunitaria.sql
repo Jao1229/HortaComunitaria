@@ -12,12 +12,6 @@ create table Usuario (
     
 );
 
-insert into Usuario (nome, email, telefone)
-values ("Hornet","hornet@gmail.com", "12345678910");
-
-select * from Usuario;
-
-
 -- Tabelas Especializadas
 create table Voluntario (
     id_usuario int primary key,
@@ -62,11 +56,6 @@ create table Evento (
     descricao text,
     local_evento varchar(100) not null
 );
-
-insert into Evento (nome, data_evento, local_evento)
-values ("Gaden Club", "2025-06-20", "SummerGamerfast");
-
-select * from Evento;
 
 -- Parcela/Canteiro
 create table Parcela (

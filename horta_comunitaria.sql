@@ -7,7 +7,7 @@ create table Usuario (
     id_usuario int auto_increment primary key,
     nome varchar(100) not null,
     email varchar(100) not null unique,
-    telefone varchar(20) not null,
+    telefone varchar(15) not null,
     tipo enum('voluntario', 'coordenador', 'visitante') not null
     
 );

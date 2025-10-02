@@ -1,5 +1,7 @@
 create database HortaComunitaria;
 
+use HortaComunitaria;
+
 -- Tabela Usuário (Entidade Geral)
 create table Usuario (
     id_usuario int auto_increment primary key,
